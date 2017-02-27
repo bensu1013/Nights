@@ -18,6 +18,7 @@
 		FDEF8BCD1E62807800492121 /* Knight.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEF8BCC1E62807800492121 /* Knight.swift */; };
 		FDEF8BCF1E62819700492121 /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEF8BCE1E62819700492121 /* EntityManager.swift */; };
 		FDEF8BD21E6282A800492121 /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEF8BD11E6282A800492121 /* SpriteComponent.swift */; };
+		FDEF8BD51E63DD5A00492121 /* SpriteConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEF8BD41E63DD5A00492121 /* SpriteConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		FDEF8BCC1E62807800492121 /* Knight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Knight.swift; sourceTree = "<group>"; };
 		FDEF8BCE1E62819700492121 /* EntityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
 		FDEF8BD11E6282A800492121 /* SpriteComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
+		FDEF8BD41E63DD5A00492121 /* SpriteConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		FDEF8BB31E627FAC00492121 /* Nights */ = {
 			isa = PBXGroup;
 			children = (
+				FDEF8BD41E63DD5A00492121 /* SpriteConstants.swift */,
 				FDEF8BD31E62845500492121 /* Entities */,
 				FDEF8BD01E62828F00492121 /* Components */,
 				FDEF8BB41E627FAC00492121 /* AppDelegate.swift */,
@@ -173,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDEF8BD51E63DD5A00492121 /* SpriteConstants.swift in Sources */,
 				FDEF8BCF1E62819700492121 /* EntityManager.swift in Sources */,
 				FDEF8BCD1E62807800492121 /* Knight.swift in Sources */,
 				FDEF8BBB1E627FAC00492121 /* GameScene.swift in Sources */,
@@ -344,6 +348,7 @@
 				FDEF8BCB1E627FAC00492121 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

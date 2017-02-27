@@ -11,7 +11,7 @@ import GameplayKit
 
 class GameScene: SKScene {
     
-    var entities = [GKEntity]()
+    var entityManager: EntityManager!
     var graphs = [String : GKGraph]()
     
     private var lastUpdateTime : TimeInterval = 0
@@ -21,8 +21,10 @@ class GameScene: SKScene {
     override func sceneDidLoad() {
 
         self.lastUpdateTime = 0
-        
+        entityManager = EntityManager(scene: self)
        
+        entityManager.add(entity: Knight(imageName: "KnightIdle1"))
+        
     }
     
     
@@ -41,10 +43,17 @@ class GameScene: SKScene {
         let dt = currentTime - self.lastUpdateTime
         
         // Update entities
-        for entity in self.entities {
+        for entity in entityManager.entities {
             entity.update(deltaTime: dt)
         }
         
         self.lastUpdateTime = currentTime
     }
 }
+
+
+
+
+
+
+
