@@ -17,17 +17,21 @@ class GameScene: SKScene {
     private var lastUpdateTime : TimeInterval = 0
     
     override func sceneDidLoad() {
-
+        print("skscene init")
+        
+    }
+    
+    override func didMove(to view: SKView) {
+        super.didMove(to: view)
         self.lastUpdateTime = 0
         entityManager = EntityManager(scene: self)
-       
+        
         entityManager.add(entity: Knight(imageName: "KnightIdle1"))
         
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print(entityManager.entities.count)
-        print(self.children.count)
+        dump(self.children)
         for entity in entityManager.entities {
             entity.component(ofType: SpriteComponent.self)?.animate(textures: SpriteConstants.player.attack, frameTime: 0.15, withKey: "Attack")
         }

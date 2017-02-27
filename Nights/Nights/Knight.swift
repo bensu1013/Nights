@@ -17,6 +17,7 @@ class Knight: GKEntity {
         super.init()
         let spriteComponent = SpriteComponent(texture: SKTexture(imageNamed: imageName))
         addComponent(spriteComponent)
+        print("knight init")
     }
     
     required init?(coder aDecoder: NSCoder) {

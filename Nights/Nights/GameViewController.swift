@@ -14,14 +14,14 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("controller viewdidload")
         // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
         // including entities and graphs.
         if let scene = GKScene(fileNamed: "GameScene") {
-            
+            print("creating scene")
             // Get the SKScene from the loaded GKScene
             if let sceneNode = scene.rootNode as! GameScene? {
-                
+                print("scenenode?")
                 // Copy gameplay related content over to the scene
 //                sceneNode.entityManager.entities = scene.entities
 //                sceneNode.graphs = scene.graphs

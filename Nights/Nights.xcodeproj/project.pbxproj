@@ -19,6 +19,7 @@
 		FDEF8BCF1E62819700492121 /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEF8BCE1E62819700492121 /* EntityManager.swift */; };
 		FDEF8BD21E6282A800492121 /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEF8BD11E6282A800492121 /* SpriteComponent.swift */; };
 		FDEF8BD51E63DD5A00492121 /* SpriteConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEF8BD41E63DD5A00492121 /* SpriteConstants.swift */; };
+		FDEF8BD71E64B7A800492121 /* KnightAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEF8BD61E64B7A800492121 /* KnightAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		FDEF8BCE1E62819700492121 /* EntityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
 		FDEF8BD11E6282A800492121 /* SpriteComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
 		FDEF8BD41E63DD5A00492121 /* SpriteConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteConstants.swift; sourceTree = "<group>"; };
+		FDEF8BD61E64B7A800492121 /* KnightAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnightAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				FDEF8BD11E6282A800492121 /* SpriteComponent.swift */,
+				FDEF8BD61E64B7A800492121 /* KnightAnimation.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				FDEF8BCD1E62807800492121 /* Knight.swift in Sources */,
 				FDEF8BBB1E627FAC00492121 /* GameScene.swift in Sources */,
 				FDEF8BBD1E627FAC00492121 /* GameViewController.swift in Sources */,
+				FDEF8BD71E64B7A800492121 /* KnightAnimation.swift in Sources */,
 				FDEF8BD21E6282A800492121 /* SpriteComponent.swift in Sources */,
 				FDEF8BB51E627FAC00492121 /* AppDelegate.swift in Sources */,
 			);

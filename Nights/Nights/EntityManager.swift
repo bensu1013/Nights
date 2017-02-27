@@ -17,6 +17,7 @@ class EntityManager {
     
     init(scene: SKScene) {
         self.scene = scene
+        print("manager init")
     }
     
     func add(entity: GKEntity) {
@@ -24,6 +25,7 @@ class EntityManager {
                 
         if let spriteNode = entity.component(ofType: SpriteComponent.self)?.node {
             scene.addChild(spriteNode)
+            print("adding node")
         }
     }
     
