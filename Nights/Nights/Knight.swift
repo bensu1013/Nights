@@ -17,7 +17,8 @@ class Knight: GKEntity {
         super.init()
         let spriteComponent = SpriteComponent(texture: SKTexture(imageNamed: imageName))
         addComponent(spriteComponent)
-        print("knight init")
+        let knightAnimation = KnightAnimation()
+        addComponent(knightAnimation)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -25,7 +26,9 @@ class Knight: GKEntity {
     }
     
     override func update(deltaTime seconds: TimeInterval) {
-        
+        if !(component(ofType: SpriteComponent.self)?.node.hasActions())! {
+            component(ofType: KnightAnimation.self)?.idle()
+        }
     }
     
 }

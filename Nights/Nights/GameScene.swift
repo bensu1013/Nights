@@ -17,7 +17,6 @@ class GameScene: SKScene {
     private var lastUpdateTime : TimeInterval = 0
     
     override func sceneDidLoad() {
-        print("skscene init")
         
     }
     
@@ -33,7 +32,7 @@ class GameScene: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         dump(self.children)
         for entity in entityManager.entities {
-            entity.component(ofType: SpriteComponent.self)?.animate(textures: SpriteConstants.player.attack, frameTime: 0.15, withKey: "Attack")
+            entity.component(ofType: KnightAnimation.self)?.walk()
         }
     }
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {

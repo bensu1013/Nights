@@ -12,19 +12,26 @@ import GameplayKit
 
 class KnightAnimation: GKComponent {
     
-    weak var node: SKSpriteNode?
-    
     override init() {
         super.init()
-        node = self.entity?.component(ofType: SpriteComponent.self)?.node
+        print("animation init")
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func idle() {
+        if let spriteComponent = self.entity?.component(ofType: SpriteComponent.self) {
+            spriteComponent.animate(textures: SpriteConstants.player.idle, frameTime: 0.1, withKey: "idle")
+        }
+    }
+    
     func walk() {
-        
+        if let spriteComponent = self.entity?.component(ofType: SpriteComponent.self) {
+            spriteComponent.animate(textures: SpriteConstants.player.walk, frameTime: 0.1, withKey: "walk")
+        }
     }
     
 }
