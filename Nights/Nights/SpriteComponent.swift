@@ -13,16 +13,12 @@ import SpriteKit
 class SpriteComponent: GKComponent {
     
     let node: SKSpriteNode
-
+    
+    
     
     init(texture: SKTexture) {
         node = SKSpriteNode(texture: texture, color: UIColor.white, size: texture.size())
         super.init()
-        
-        
-        let idle = SpriteConstants.player.idle
-        let animate = SKAction.repeatForever(SKAction.animate(with: idle, timePerFrame: 0.15))
-        node.run(animate)
         
     }
     
@@ -30,8 +26,17 @@ class SpriteComponent: GKComponent {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func animate(textures: [SKTexture], frameTime: Double, withKey: String) {
+        let animateAction = SKAction.animate(with: textures, timePerFrame: frameTime)
+        node.run(animateAction, withKey: withKey)
+    }
     
-    
-    
+    func isAnimating(withKey: String) -> Bool {
+        if let _ = node.action(forKey: withKey) {
+            return true
+        } else {
+            return false
+        }
+    }
     
 }

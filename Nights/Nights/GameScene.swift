@@ -15,8 +15,6 @@ class GameScene: SKScene {
     var graphs = [String : GKGraph]()
     
     private var lastUpdateTime : TimeInterval = 0
-    private var label : SKLabelNode?
-    private var spinnyNode : SKShapeNode?
     
     override func sceneDidLoad() {
 
@@ -27,9 +25,25 @@ class GameScene: SKScene {
         
     }
     
-    
- 
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print(entityManager.entities.count)
+        print(self.children.count)
+        for entity in entityManager.entities {
+            entity.component(ofType: SpriteComponent.self)?.animate(textures: SpriteConstants.player.attack, frameTime: 0.15, withKey: "Attack")
+        }
+    }
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for entity in entityManager.entities {
+            if !(entity.component(ofType: SpriteComponent.self)?.node.hasActions())! {
+                entity.component(ofType: SpriteComponent.self)?.animate(textures: SpriteConstants.player.run, frameTime: 0.15, withKey: "Run")
+            }
+        }
+    }
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for entity in entityManager.entities {
+            entity.component(ofType: SpriteComponent.self)?.animate(textures: SpriteConstants.player.dead, frameTime: 0.15, withKey: "Dead")
+        }
+    }
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
