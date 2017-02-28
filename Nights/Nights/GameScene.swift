@@ -12,7 +12,7 @@ import GameplayKit
 class GameScene: SKScene {
     
     var entityManager: EntityManager!
-    var graphs = [String : GKGraph]()
+//    var graphs = [String : GKGraph]()
     
     private var lastUpdateTime : TimeInterval = 0
     
@@ -23,29 +23,22 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         self.lastUpdateTime = 0
-        entityManager = EntityManager(scene: self)
         
-        entityManager.add(entity: Knight(imageName: "KnightIdle1"))
+        entityManager = EntityManager(scene: self)
+        let knight = Knight(imageName: "KnightIdle1")
+        entityManager.add(entity: knight)
+        entityManager.knight = knight
         
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        dump(self.children)
-        for entity in entityManager.entities {
-            entity.component(ofType: KnightAnimation.self)?.walk()
-        }
+        entityManager.knight?.change(state: .attack)
     }
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for entity in entityManager.entities {
-            if !(entity.component(ofType: SpriteComponent.self)?.node.hasActions())! {
-                entity.component(ofType: SpriteComponent.self)?.animate(textures: SpriteConstants.player.run, frameTime: 0.15, withKey: "Run")
-            }
-        }
+        entityManager.knight?.change(state: .run)
     }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for entity in entityManager.entities {
-            entity.component(ofType: SpriteComponent.self)?.animate(textures: SpriteConstants.player.dead, frameTime: 0.15, withKey: "Dead")
-        }
+        
     }
     
     override func update(_ currentTime: TimeInterval) {

@@ -14,6 +14,7 @@ class EntityManager {
     
     var entities = Set<GKEntity>()
     let scene: SKScene
+    var knight: Knight?
     
     init(scene: SKScene) {
         self.scene = scene

@@ -20,6 +20,7 @@
 		FDEF8BD21E6282A800492121 /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEF8BD11E6282A800492121 /* SpriteComponent.swift */; };
 		FDEF8BD51E63DD5A00492121 /* SpriteConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEF8BD41E63DD5A00492121 /* SpriteConstants.swift */; };
 		FDEF8BD71E64B7A800492121 /* KnightAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEF8BD61E64B7A800492121 /* KnightAnimation.swift */; };
+		FDEF8BD91E65216A00492121 /* HealthComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEF8BD81E65216A00492121 /* HealthComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FDEF8BD11E6282A800492121 /* SpriteComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
 		FDEF8BD41E63DD5A00492121 /* SpriteConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteConstants.swift; sourceTree = "<group>"; };
 		FDEF8BD61E64B7A800492121 /* KnightAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnightAnimation.swift; sourceTree = "<group>"; };
+		FDEF8BD81E65216A00492121 /* HealthComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,11 +72,11 @@
 		FDEF8BB31E627FAC00492121 /* Nights */ = {
 			isa = PBXGroup;
 			children = (
+				FDEF8BB61E627FAC00492121 /* GameScene.sks */,
 				FDEF8BD41E63DD5A00492121 /* SpriteConstants.swift */,
 				FDEF8BD31E62845500492121 /* Entities */,
 				FDEF8BD01E62828F00492121 /* Components */,
 				FDEF8BB41E627FAC00492121 /* AppDelegate.swift */,
-				FDEF8BB61E627FAC00492121 /* GameScene.sks */,
 				FDEF8BB81E627FAC00492121 /* Actions.sks */,
 				FDEF8BBA1E627FAC00492121 /* GameScene.swift */,
 				FDEF8BCE1E62819700492121 /* EntityManager.swift */,
@@ -92,6 +94,7 @@
 			children = (
 				FDEF8BD11E6282A800492121 /* SpriteComponent.swift */,
 				FDEF8BD61E64B7A800492121 /* KnightAnimation.swift */,
+				FDEF8BD81E65216A00492121 /* HealthComponent.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			files = (
 				FDEF8BD51E63DD5A00492121 /* SpriteConstants.swift in Sources */,
 				FDEF8BCF1E62819700492121 /* EntityManager.swift in Sources */,
+				FDEF8BD91E65216A00492121 /* HealthComponent.swift in Sources */,
 				FDEF8BCD1E62807800492121 /* Knight.swift in Sources */,
 				FDEF8BBB1E627FAC00492121 /* GameScene.swift in Sources */,
 				FDEF8BBD1E627FAC00492121 /* GameViewController.swift in Sources */,

@@ -69,7 +69,4 @@ struct SpriteConstants {
                 SKTexture(imageNamed: "KnightDead9"),SKTexture(imageNamed: "KnightDead10")]
         }
     }
-    
-    
-    
 }

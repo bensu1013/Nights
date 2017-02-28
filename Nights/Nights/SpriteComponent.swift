@@ -26,9 +26,16 @@ class SpriteComponent: GKComponent {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func animate(textures: [SKTexture], frameTime: Double, withKey: String) {
+    func animate(textures: [SKTexture], frameTime: Double, withKey: String, handler: (()->())? = nil) {
         let animateAction = SKAction.animate(with: textures, timePerFrame: frameTime)
-        node.run(animateAction, withKey: withKey)
+        let handlerAction = SKAction.run {
+            if let handle = handler {
+                handle()
+            }
+        }
+        
+        let sequence = SKAction.sequence([animateAction, handlerAction])
+        node.run(sequence, withKey: withKey)
     }
     
     func isAnimating(withKey: String) -> Bool {
@@ -38,5 +45,6 @@ class SpriteComponent: GKComponent {
             return false
         }
     }
+
     
 }
