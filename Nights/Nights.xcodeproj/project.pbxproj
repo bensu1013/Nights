@@ -21,6 +21,7 @@
 		FDEF8BD51E63DD5A00492121 /* SpriteConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEF8BD41E63DD5A00492121 /* SpriteConstants.swift */; };
 		FDEF8BD71E64B7A800492121 /* KnightAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEF8BD61E64B7A800492121 /* KnightAnimation.swift */; };
 		FDEF8BD91E65216A00492121 /* HealthComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEF8BD81E65216A00492121 /* HealthComponent.swift */; };
+		FDEF8BDB1E6604D100492121 /* MovementComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEF8BDA1E6604D100492121 /* MovementComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		FDEF8BD41E63DD5A00492121 /* SpriteConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteConstants.swift; sourceTree = "<group>"; };
 		FDEF8BD61E64B7A800492121 /* KnightAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnightAnimation.swift; sourceTree = "<group>"; };
 		FDEF8BD81E65216A00492121 /* HealthComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthComponent.swift; sourceTree = "<group>"; };
+		FDEF8BDA1E6604D100492121 /* MovementComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovementComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				FDEF8BD11E6282A800492121 /* SpriteComponent.swift */,
+				FDEF8BDA1E6604D100492121 /* MovementComponent.swift */,
 				FDEF8BD61E64B7A800492121 /* KnightAnimation.swift */,
 				FDEF8BD81E65216A00492121 /* HealthComponent.swift */,
 			);
@@ -182,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDEF8BDB1E6604D100492121 /* MovementComponent.swift in Sources */,
 				FDEF8BD51E63DD5A00492121 /* SpriteConstants.swift in Sources */,
 				FDEF8BCF1E62819700492121 /* EntityManager.swift in Sources */,
 				FDEF8BD91E65216A00492121 /* HealthComponent.swift in Sources */,

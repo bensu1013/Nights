@@ -14,8 +14,6 @@ class SpriteComponent: GKComponent {
     
     let node: SKSpriteNode
     
-    
-    
     init(texture: SKTexture) {
         node = SKSpriteNode(texture: texture, color: UIColor.clear, size: texture.size())
         super.init()
